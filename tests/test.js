@@ -1,13 +1,14 @@
 'use strict';
 
-var assert = require('assert');
-var chai = require('chai');
-var assert = chai.assert;
+const chai = require('chai');
+const expect = chai.expect;
 
-describe('Array', function () {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal(-1, [1, 2, 3].indexOf(4));
+const arrayTarget = require('../arrayTarget');
+
+describe('function', function () {
+  describe('arrayTarget', function () {
+    it('should return [-1,-1] when no array numbers add up to the target', function () {
+      expect(arrayTarget([1,2,3],0)).to.equal([-1,-1]);
     });
   });
 });

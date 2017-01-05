@@ -1,6 +1,6 @@
 'use strict';
 
-function arrayTarget(array, target) {
+var arrayTarget = function (array, target) {
   for (let i=0; i<array.length; i++) {
     for (let j=0; j<array.length; j++) {
       if (array[i]+array[j]===target) {
@@ -9,4 +9,6 @@ function arrayTarget(array, target) {
     }
   }
   return [-1,-1];
-}
+};
+
+module.exports=arrayTarget;
